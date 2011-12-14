@@ -47,7 +47,9 @@ Open your application project. Expand the Frameworks folder.
 
 You must link with the frameworks listed below. The easiest way is to simply drag the framework located in the `lib` folder of this project from finder to your Frameworks folder.
 
-Make sure that (i) `Copy items into destination group's folder (if needed)` is _not_ checked and (ii) only your "-LP " target is checked in `Add to targets`
+Make sure that (i) `Copy items into destination group's folder (if needed)` is _not_ checked and (ii) only your "-LP " target is checked in `Add to targets`.
+
+Then make sure the other frameworks mentioned in the screenshot below are added (MapKit is optional).
 
 ![Build settings](https://github.com/LessPainful/LessPainful_ios/raw/master/documentation/Frameworks.png "Linking with frameworks")
 
@@ -104,10 +106,14 @@ also work for XCode versions >= 4.0.
 Exploring the sample application.
 ---------------------------------
 
+Download the sample app:
+
+(https://github.com/LessPainful/LessPainful_ios_sample_app)
+
 You can now explore the sample application:
 
-Let's say you've extracted the zip file into a working
-directory, examples.
+Let's say you've extracted the sample app file into a working
+directory, `examples`.
 
 Open the XCode project: LPSimpleExample.xcodeproj using XCode.
 
@@ -125,21 +131,8 @@ If that message is there, you're good to go.
 
 ### Play with it
 
-Now start the Ruby irb using the following command.
-
-    krukow:~/examples$ STEP_PAUSE=2 OS=ios4 DEVICE=iphone DEVICE_ENDPOINT=http://localhost:37265 irb
-
-Note that if you're running on iOS4.x you must write `OS=ios4` and if
-you're running iOS 5.x, write `OS=ios5`.
-
-In the irb first require:
-
-    ruby-1.9.2-p290 :001 > require 'ilesspainfulclient-cucumber/operations'
-    => true
-Then include
-
-    ruby-1.9.2-p290 :002 > include ILessPainfulClient::Cucumber::Operations
-    => Object
+The easy way is to just run one of the irb scripts: `irb_ios4.sh` or
+`irb_ios5.sh`.
 
 From this console you can explore your application interactively.
 
@@ -147,6 +140,8 @@ You can query, touch, scroll, etc from the irb session.
 For example, notice that the sample app has a button: "Login".
 
 ### Query
+If you're running the iOS5 iPhone simulator run `irb_ios5.sh` otherwise: `irb_ios4.sh`.
+
 Now try this from the irb:
 
     ruby-1.9.2-p290 :003 > query("button")
