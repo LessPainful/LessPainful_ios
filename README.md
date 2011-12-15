@@ -53,7 +53,7 @@ Then make sure the other frameworks mentioned in the screenshot below are added 
 
 ![Build settings](https://github.com/LessPainful/LessPainful_ios/raw/master/documentation/Frameworks.png "Linking with frameworks")
 
-![Build settings](example-4.png "Options")
+![Build settings](https://github.com/LessPainful/LessPainful_ios/raw/master/documentation/example-4.png "Options")
 
 
 ### Try it out!
